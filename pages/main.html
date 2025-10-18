@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thanakorn Thajan - Main</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
       rel="stylesheet"
@@ -154,23 +154,6 @@
     </div>
 
     <!-- JavaScript for Navbar -->
-    <script>
-      // Mobile menu toggle
-      const navToggle = document.getElementById("navToggle");
-      const navMenu = document.getElementById("navMenu");
-
-      navToggle.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-        navToggle.classList.toggle("active");
-      });
-
-      // Close mobile menu when clicking outside
-      document.addEventListener("click", (e) => {
-        if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
-          navMenu.classList.remove("active");
-          navToggle.classList.remove("active");
-        }
-      });
-    </script>
+    <script src="../js/navigation.js"></script>
   </body>
 </html>
