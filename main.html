@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanakorn Thajan - Main</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">Thanakorn Thajan</div>
+        <button class="nav-toggle" id="navToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item">
+            <a href="main.html" class="nav-link active">Main</a>
+          </li>
+          <li class="nav-item">
+            <a href="experience.html" class="nav-link">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a href="education.html" class="nav-link">Education</a>
+          </li>
+          <li class="nav-item">
+            <a href="certifications.html" class="nav-link">Certifications</a>
+          </li>
+          <li class="nav-item">
+            <a href="projects.html" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="hackathon.html" class="nav-link">Hackathon</a>
+          </li>
+          <li class="nav-item">
+            <a href="volunteering.html" class="nav-link">Volunteering</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <!-- MAIN SECTION -->
+      <section id="main" class="main-section">
+        <header>
+          <div class="profile-image-wrapper">
+            <img
+              src="https://avatars.githubusercontent.com/u/102008453?v=4"
+              alt="Thanakorn Thajan Profile Picture"
+              class="profile-image"
+            />
+          </div>
+          <h1>Thanakorn Thajan</h1>
+          <p class="job-title">
+            Software Engineer | Energy Management Specialist | Data Analyst
+          </p>
+          <div class="contact-links">
+            <a href="mailto:t.thanakorn@hotmail.com">t.thanakorn@hotmail.com</a>
+            |
+            <a href="https://github.com/HeartThanakorn" target="_blank"
+              >GitHub</a
+            >
+            |
+            <a
+              href="https://www.linkedin.com/in/thanakorn-thajan/"
+              target="_blank"
+              >LinkedIn</a
+            >
+          </div>
+        </header>
+
+        <div class="section-content">
+          <h2>About Me</h2>
+          <p style="margin-bottom: 16px">
+            I am an experienced professional in maintenance, facility
+            management, energy optimization, and product coordination, with over
+            <strong>19 years of expertise</strong> across industries including
+            retail, fast food, and hospitality. I hold a bachelor's degree in
+            electrical engineering and an MBA, and I am currently pursuing a
+            master's in energy management and software engineering.
+          </p>
+
+          <p style="margin-bottom: 16px">
+            My career highlights include managing large-scale maintenance
+            operations, spearheading energy-saving initiatives, and delivering
+            cost-effective solutions across various industries. I am skilled in
+            project management, strategic planning, full-stack development, and
+            data analytics to drive operational excellence. Furthermore, I
+            possess expertise in
+            <strong>designing workflows for agentic AI</strong> to enhance
+            efficiency and create more intelligent automation systems, and I am
+            particularly passionate about the transformative potential of
+            artificial intelligence.
+          </p>
+
+          <p>
+            Passionate about continuous learning and innovation, I am dedicated
+            to improving efficiency, reducing energy consumption, and achieving
+            sustainable goals.
+          </p>
+        </div>
+
+        <div class="section-content">
+          <h2>🛠️ Technical Skills</h2>
+
+          <h3>Languages & Frameworks</h3>
+          <div class="skill-tags-container">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">C</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+            <span class="skill-tag">Bootstrap</span>
+          </div>
+
+          <h3>Data, BI & Tools</h3>
+          <div class="skill-tags-container">
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">Tableau</span>
+            <span class="skill-tag">Looker</span>
+            <span class="skill-tag">Google Data Studio</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">Figma</span>
+          </div>
+
+          <h3>Domain Expertise</h3>
+          <div class="skill-tags-container">
+            <span class="skill-tag">Energy Management</span>
+            <span class="skill-tag">Project Management</span>
+            <span class="skill-tag">Data Analytics</span>
+            <span class="skill-tag">Business Intelligence</span>
+            <span class="skill-tag">UX Design</span>
+            <span class="skill-tag">Full-Stack Development</span>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <p>
+          &copy; 2025 Thanakorn Thajan. Built with HTML, CSS, and JavaScript.
+        </p>
+      </footer>
+    </div>
+
+    <!-- JavaScript for Navbar -->
+    <script>
+      // Mobile menu toggle
+      const navToggle = document.getElementById("navToggle");
+      const navMenu = document.getElementById("navMenu");
+
+      navToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        navToggle.classList.toggle("active");
+      });
+
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", (e) => {
+        if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+          navMenu.classList.remove("active");
+          navToggle.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>

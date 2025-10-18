@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanakorn Thajan - Projects</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">Thanakorn Thajan</div>
+        <button class="nav-toggle" id="navToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item">
+            <a href="main.html" class="nav-link">Main</a>
+          </li>
+          <li class="nav-item">
+            <a href="experience.html" class="nav-link">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a href="education.html" class="nav-link">Education</a>
+          </li>
+          <li class="nav-item">
+            <a href="certifications.html" class="nav-link">Certifications</a>
+          </li>
+          <li class="nav-item">
+            <a href="projects.html" class="nav-link active">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="hackathon.html" class="nav-link">Hackathon</a>
+          </li>
+          <li class="nav-item">
+            <a href="volunteering.html" class="nav-link">Volunteering</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <!-- PROJECTS SECTION -->
+      <section id="projects">
+        <h2>💼 Personal & Academic Projects</h2>
+
+        <div class="project-grid">
+          <div class="project-card">
+            <span class="project-tag personal">42 Berlin</span>
+            <h3>Libft - Custom C Library</h3>
+            <p class="project-subtitle">Core Programming Project</p>
+            <p>
+              Recreated essential C standard library functions from scratch,
+              implementing memory management, string manipulation, and linked
+              lists to build a solid foundation in low-level programming.
+            </p>
+            <div class="skill-tags">
+              <span>C Language</span>
+              <span>Memory Management</span>
+              <span>Algorithms</span>
+              <span>Data Structures</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <span class="project-tag personal">42 Berlin</span>
+            <h3>ft_printf - Custom Printf Implementation</h3>
+            <p class="project-subtitle">Advanced C Programming</p>
+            <p>
+              Developed a custom implementation of the printf function, handling
+              multiple format specifiers and edge cases while deepening
+              understanding of variadic functions.
+            </p>
+            <div class="skill-tags">
+              <span>C Language</span>
+              <span>Variadic Functions</span>
+              <span>String Formatting</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <span class="project-tag personal">Personal Project</span>
+            <h3>Energy Dashboard Prototype</h3>
+            <p class="project-subtitle">Data Visualization</p>
+            <p>
+              Created an interactive energy consumption dashboard using Power BI
+              to visualize real-time energy metrics and identify optimization
+              opportunities for commercial facilities.
+            </p>
+            <div class="skill-tags">
+              <span>Power BI</span>
+              <span>Data Analytics</span>
+              <span>Energy Management</span>
+              <span>Visualization</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <span class="project-tag personal">Web Development</span>
+            <h3>Portfolio Website</h3>
+            <p class="project-subtitle">Responsive Web Design</p>
+            <p>
+              Designed and developed this professional portfolio website using
+              HTML5, CSS3, and JavaScript, featuring responsive design and
+              smooth navigation.
+            </p>
+            <div class="skill-tags">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+              <span>Responsive Design</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <p>
+          &copy; 2025 Thanakorn Thajan. Built with HTML, CSS, and JavaScript.
+        </p>
+      </footer>
+    </div>
+
+    <!-- JavaScript for Navbar -->
+    <script>
+      const navToggle = document.getElementById("navToggle");
+      const navMenu = document.getElementById("navMenu");
+
+      navToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        navToggle.classList.toggle("active");
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+          navMenu.classList.remove("active");
+          navToggle.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>

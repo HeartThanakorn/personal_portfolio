@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanakorn Thajan - Volunteering</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">Thanakorn Thajan</div>
+        <button class="nav-toggle" id="navToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item">
+            <a href="main.html" class="nav-link">Main</a>
+          </li>
+          <li class="nav-item">
+            <a href="experience.html" class="nav-link">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a href="education.html" class="nav-link">Education</a>
+          </li>
+          <li class="nav-item">
+            <a href="certifications.html" class="nav-link">Certifications</a>
+          </li>
+          <li class="nav-item">
+            <a href="projects.html" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="hackathon.html" class="nav-link">Hackathon</a>
+          </li>
+          <li class="nav-item">
+            <a href="volunteering.html" class="nav-link active">Volunteering</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <!-- VOLUNTEERING SECTION -->
+      <section id="volunteering">
+        <h2>🤝 Volunteering & Community Engagement</h2>
+
+        <div class="volunteer-grid">
+          <div class="volunteer-card">
+            <div class="volunteer-icon">👥</div>
+            <h3>Tech Mentorship Program</h3>
+            <p class="volunteer-org">42 Berlin Community</p>
+            <p class="volunteer-period">2024 - Present</p>
+            <p>
+              Mentoring newcomers in C programming and software engineering
+              fundamentals, conducting peer-learning sessions, and supporting
+              collaborative projects.
+            </p>
+          </div>
+
+          <div class="volunteer-card">
+            <div class="volunteer-icon">🌱</div>
+            <h3>Sustainability Advocate</h3>
+            <p class="volunteer-org">Local Energy Initiatives</p>
+            <p class="volunteer-period">2023 - Present</p>
+            <p>
+              Promoting energy efficiency awareness, conducting workshops on
+              sustainable practices, and contributing to community renewable
+              energy projects.
+            </p>
+          </div>
+
+          <div class="volunteer-card">
+            <div class="volunteer-icon">💡</div>
+            <h3>Open Source Contributor</h3>
+            <p class="volunteer-org">GitHub Community</p>
+            <p class="volunteer-period">2024 - Present</p>
+            <p>
+              Contributing to open-source projects, sharing knowledge through
+              documentation, and participating in collaborative development
+              efforts.
+            </p>
+          </div>
+
+          <div class="volunteer-card">
+            <div class="volunteer-icon">🎓</div>
+            <h3>Career Transition Support</h3>
+            <p class="volunteer-org">Professional Networks</p>
+            <p class="volunteer-period">2023 - Present</p>
+            <p>
+              Sharing experiences and insights with professionals transitioning
+              into tech, providing guidance on skill development and career
+              pathways.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <p>
+          &copy; 2025 Thanakorn Thajan. Built with HTML, CSS, and JavaScript.
+        </p>
+      </footer>
+    </div>
+
+    <!-- JavaScript for Navbar -->
+    <script>
+      const navToggle = document.getElementById("navToggle");
+      const navMenu = document.getElementById("navMenu");
+
+      navToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        navToggle.classList.toggle("active");
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+          navMenu.classList.remove("active");
+          navToggle.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>

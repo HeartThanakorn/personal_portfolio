@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanakorn Thajan - Education</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">Thanakorn Thajan</div>
+        <button class="nav-toggle" id="navToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item">
+            <a href="main.html" class="nav-link">Main</a>
+          </li>
+          <li class="nav-item">
+            <a href="experience.html" class="nav-link">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a href="education.html" class="nav-link active">Education</a>
+          </li>
+          <li class="nav-item">
+            <a href="certifications.html" class="nav-link">Certifications</a>
+          </li>
+          <li class="nav-item">
+            <a href="projects.html" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="hackathon.html" class="nav-link">Hackathon</a>
+          </li>
+          <li class="nav-item">
+            <a href="volunteering.html" class="nav-link">Volunteering</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <!-- EDUCATION SECTION -->
+      <section id="education">
+        <h2>🎓 Education</h2>
+
+        <div class="education-grid">
+          <div class="education-card current">
+            <div class="edu-badge">Current</div>
+            <h3>Software Engineering</h3>
+            <p class="institution">42 Berlin, Germany</p>
+            <p class="edu-description">
+              Intensive peer-to-peer learning program focusing on C programming,
+              algorithms, system architecture, and full-stack development.
+            </p>
+          </div>
+
+          <div class="education-card current">
+            <div class="edu-badge">Current</div>
+            <h3>MA in Energy Management</h3>
+            <p class="institution">
+              Berlin School of Business and Innovation, Germany
+            </p>
+            <p class="edu-description">
+              Advanced studies in sustainable energy systems, renewable
+              technologies, and strategic energy management.
+            </p>
+          </div>
+
+          <div class="education-card">
+            <h3>Master of Business Administration (MBA)</h3>
+            <p class="institution">Kasetsart University, Thailand</p>
+            <p class="edu-description">
+              Specialized in business strategy, operations management, and
+              organizational leadership.
+            </p>
+          </div>
+
+          <div class="education-card">
+            <h3>Bachelor of Electrical Engineering</h3>
+            <p class="institution">Naresuan University, Thailand</p>
+            <p class="edu-description">
+              Foundation in electrical systems, power engineering, and
+              industrial automation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <p>
+          &copy; 2025 Thanakorn Thajan. Built with HTML, CSS, and JavaScript.
+        </p>
+      </footer>
+    </div>
+
+    <!-- JavaScript for Navbar -->
+    <script>
+      const navToggle = document.getElementById("navToggle");
+      const navMenu = document.getElementById("navMenu");
+
+      navToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        navToggle.classList.toggle("active");
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+          navMenu.classList.remove("active");
+          navToggle.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>
