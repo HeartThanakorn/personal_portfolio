@@ -23,27 +23,28 @@ personal_portfolio/
 
 ## 🚀 Features
 
-- **Multi-page Navigation**: Separate pages for each section
-- **Responsive Design**: Mobile-first approach with hamburger menu
-- **Modern UI**: Clean, professional design with smooth animations
-- **Organized Structure**: Separated CSS, JS, and HTML files
+- **Multi-page Navigation**: Organized, separate pages for distinct content sections.
+- **Responsive Design**: Mobile-first approach with fluid layouts and a responsive hamburger menu.
+- **Modern UI/UX**: Premium aesthetic featuring glassmorphism (backdrop-filter), CSS variables for theming, elegant soft shadows, and rounded card interfaces.
+- **Micro-Interactions**: Smooth hover states, `transform` animations on cards, and dynamic entrance animations using Animate.css.
 
 ## 📱 Pages
 
-1. **Main** - Profile, About Me, and Technical Skills
-2. **Experience** - 19+ years of professional experience
-3. **Education** - Academic qualifications and current studies
-4. **Certifications** - Professional certifications and training
-5. **Projects** - Personal and academic projects
-6. **Hackathon** - Competition achievements and awards
-7. **Volunteering** - Community engagement activities
+1. **Main** - Profile, Summary, and Technical Skills (Languages, Data/BI, Domain Expertise)
+2. **Experience** - 20+ years of professional experience across engineering, DevOps, and facility management
+3. **Education** - Academic qualifications and ongoing postgraduate studies
+4. **Certifications** - Professional training including Google, IBM AI, and DeepSeek credentials
+5. **Projects** - Full-Stack, AI, and Mobile development projects (e.g., PharmaRAG, SparFuchs AI)
+6. **Hackathon** - Award-winning competition achievements
+7. **Volunteering** - Community engagement and technical volunteering
 
-## 🛠️ Technologies
+## 🛠️ Technologies Built With
 
-- HTML5
-- CSS3
-- JavaScript (Vanilla)
-- Google Fonts (Inter)
+- **HTML5 & Vanilla CSS3**
+- **CSS Variables** (Robust theming system)
+- **JavaScript** (Vanilla DOM manipulation)
+- **Animate.css** (For scroll and entrance animations)
+- **Google Fonts** (Inter for modern typography)
 
 ## 📦 How to Use
 
