@@ -357,7 +357,7 @@ img {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1.1fr 0.9fr;
   gap: 48px;
   align-items: center;
   position: relative;
@@ -490,13 +490,14 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .hero-avatar-wrapper {
   position: relative;
   width: 220px;
   height: 220px;
-  margin: 0 auto 24px;
+  margin: 0 auto 34px;
 }
 
 .hero-avatar-glow {
@@ -505,7 +506,13 @@ img {
   border-radius: 50%;
   background: var(--gradient-accent);
   filter: blur(16px);
-  opacity: 0.65;
+  opacity: 0.6;
+  transition: opacity var(--transition-normal);
+}
+
+.hero-avatar-wrapper:hover .hero-avatar-glow {
+  opacity: 0.85;
+  filter: blur(20px);
 }
 
 .hero-avatar-img {
@@ -516,40 +523,51 @@ img {
   object-fit: cover;
   border: 4px solid var(--bg-surface);
   box-shadow: var(--shadow-lg);
+  transition: transform var(--transition-normal);
+}
+
+.hero-avatar-wrapper:hover .hero-avatar-img {
+  transform: scale(1.02);
 }
 
 [data-theme="light"] .hero-avatar-img {
   border-color: #ffffff;
-  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.14);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.14);
 }
 
-/* Bento Metrics Grid */
-.bento-metrics-grid {
+/* ==========================================================================
+   HERO METRIC CARDS (2x2 Grid Under Photo)
+   ========================================================================== */
+
+.hero-metrics-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 14px;
   width: 100%;
 }
 
-.bento-metric-card {
+.hero-metric-card {
   background: var(--bg-card);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
-  padding: 18px 20px;
+  padding: 16px 18px;
   transition: all var(--transition-fast);
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-[data-theme="light"] .bento-metric-card {
+[data-theme="light"] .hero-metric-card {
   background: #ffffff;
   border: 1px solid rgba(226, 232, 240, 0.95);
   box-shadow: 0 6px 18px -4px rgba(15, 23, 42, 0.06);
 }
 
-.bento-metric-card::before {
+.hero-metric-card::before {
   content: '';
   position: absolute;
   top: 0;
@@ -561,24 +579,24 @@ img {
   transition: opacity var(--transition-fast);
 }
 
-.bento-metric-card:hover {
+.hero-metric-card:hover {
   transform: translateY(-2px);
   border-color: var(--border-hover);
   background: var(--bg-card-hover);
   box-shadow: var(--shadow-glow);
 }
 
-[data-theme="light"] .bento-metric-card:hover {
+[data-theme="light"] .hero-metric-card:hover {
   background: #ffffff;
   box-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.1);
 }
 
-.bento-metric-card:hover::before {
+.hero-metric-card:hover::before {
   opacity: 1;
 }
 
 .metric-num {
-  font-size: 1.75rem;
+  font-size: 1.55rem;
   font-weight: 800;
   color: var(--text-primary);
   letter-spacing: -0.02em;
@@ -1403,6 +1421,13 @@ img {
   .edu-cert-grid {
     grid-template-columns: 1fr;
   }
+
+  .hero-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    max-width: 520px;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1443,13 +1468,9 @@ img {
   }
 
   .hero-avatar-wrapper {
-    width: 180px;
-    height: 180px;
-    margin-bottom: 24px;
-  }
-
-  .bento-metrics-grid {
-    grid-template-columns: repeat(2, 1fr);
+    width: 160px;
+    height: 160px;
+    margin-bottom: 16px;
   }
 
   .project-bento-card {
@@ -1519,12 +1540,12 @@ img {
   }
 
   .hero-avatar-wrapper {
-    width: 170px;
-    height: 170px;
-    margin-bottom: 20px;
+    width: 140px;
+    height: 140px;
+    margin-bottom: 14px;
   }
 
-  .bento-metrics-grid {
+  .hero-metrics-grid {
     grid-template-columns: 1fr;
     gap: 10px;
   }
