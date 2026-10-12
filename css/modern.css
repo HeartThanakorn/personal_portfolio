@@ -139,12 +139,12 @@ img {
 }
 
 .section {
-  padding: 96px 0;
+  padding: 48px 0;
   position: relative;
 }
 
 .section-header {
-  margin-bottom: 52px;
+  margin-bottom: 28px;
 }
 
 .section-tag {
@@ -336,8 +336,8 @@ img {
    ========================================================================== */
 
 .hero-section {
-  padding-top: 150px;
-  padding-bottom: 80px;
+  padding-top: 130px;
+  padding-bottom: 40px;
   position: relative;
   overflow: hidden;
 }
@@ -1310,11 +1310,11 @@ img {
 
 @media (max-width: 768px) {
   .section {
-    padding: 64px 0;
+    padding: 40px 0;
   }
 
   .section-header {
-    margin-bottom: 36px;
+    margin-bottom: 24px;
   }
 
   .nav-links {
