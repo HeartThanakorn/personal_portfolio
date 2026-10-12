@@ -1,538 +1,1087 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thanakorn Thajan - Portfolio</title>
-    <meta http-equiv="refresh" content="0; url=pages/main.html">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script>
-        // Redirect to main.html immediately
-        window.location.href = "pages/main.html";
-    </script>
-</head>
-<body>
-    <div style="text-align: center; padding: 50px;">
-        <h1>Redirecting...</h1>
-        <p>If you are not redirected automatically, <a href="pages/main.html">click here</a>.</p>
-    </div>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">Thanakorn Thajan</div>
-            <button class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li class="nav-item"><a href="#main" class="nav-link active">Main</a></li>
-                <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
-                <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
-                <li class="nav-item"><a href="#certifications" class="nav-link">Certifications</a></li>
-                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-                <li class="nav-item"><a href="#hackathon" class="nav-link">Hackathon</a></li>
-                <li class="nav-item"><a href="#volunteering" class="nav-link">Volunteering</a></li>
-            </ul>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanakorn Thajan | Software Engineer & AI Builder</title>
+    
+    <!-- Meta tags for SEO & Social Sharing -->
+    <meta name="description" content="Portfolio of Thanakorn Thajan - Software Engineer & AI Builder based in Berlin. 42 Berlin Cadet, Dual Master's in Energy Management & MBA, Berlin Battery Hackathon Winner (2nd Place). Full-Stack, Satellite Analytics, and Agentic RAG Systems." />
+    <meta name="keywords" content="Thanakorn Thajan, Software Engineer, AI Engineer, 42 Berlin, Next.js, FastAPI, Docker, RAG, OpenEO, Energy Management, Berlin" />
+    <meta property="og:title" content="Thanakorn Thajan | Software Engineer & AI Builder" />
+    <meta property="og:description" content="Bridging 20+ years of engineering & energy domain expertise with modern full-stack & AI engineering." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://heartthanakorn.github.io/" />
+
+    <!-- Google Fonts: Plus Jakarta Sans for modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/modern.css" />
+  </head>
+  <body>
+    <!-- ==========================================================================
+         NAVIGATION BAR
+         ========================================================================== -->
+    <header class="modern-navbar">
+      <div class="nav-wrapper">
+        <a href="#hero" class="nav-brand">
+          <span class="brand-dot"></span>
+          <span>Thanakorn Thajan</span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#featured" class="nav-item-link">Featured</a></li>
+          <li><a href="#projects" class="nav-item-link">Projects</a></li>
+          <li><a href="#hackathons" class="nav-item-link">Hackathons</a></li>
+          <li><a href="#skills" class="nav-item-link">Skills</a></li>
+          <li><a href="#experience" class="nav-item-link">Experience</a></li>
+          <li><a href="#education" class="nav-item-link">Education & Certs</a></li>
+          <li><a href="#contact" class="nav-item-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Theme">
+            <span id="themeIcon">
+              <!-- Default Sun Icon (Dark Mode active) -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+            </span>
+          </button>
+
+          <a href="mailto:t.thanakorn@hotmail.com" class="nav-cta-btn js-copy-email">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>Get in Touch</span>
+          </a>
+
+          <button id="mobileMenuBtn" class="mobile-menu-toggle" aria-label="Toggle Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
         </div>
-    </nav>
+      </div>
+    </header>
 
-    <div class="container">
-        <!-- MAIN SECTION -->
-        <section id="main" class="main-section">
-            <header>
-                <div class="profile-image-wrapper">
-                    <img src="https://avatars.githubusercontent.com/u/102008453?v=4" alt="Thanakorn Thajan Profile Picture" class="profile-image">
-                </div>
-                <h1>Thanakorn Thajan</h1>
-                <p class="job-title">Software Engineer | Energy Management Specialist | Data Analyst</p>
-                <div class="contact-links">
-                    <a href="mailto:t.thanakorn@hotmail.com">t.thanakorn@hotmail.com</a> |
-                    <a href="https://github.com/HeartThanakorn" target="_blank">GitHub</a> |
-                    <a href="https://www.linkedin.com/in/thanakorn-thajan/" target="_blank">LinkedIn</a>
-                </div>
-            </header>
-
-            <div class="section-content">
-                <h2>About Me</h2>
-                <p style="margin-bottom: 16px;">
-                    I am an experienced professional in maintenance, facility management, energy optimization, and product coordination, with over 19 years of expertise across industries including retail, fast food, and hospitality. I hold a bachelor's degree in electrical engineering and an MBA, and I am currently pursuing a master's in energy management and software engineering.
-                </p>
-                <p>
-                    My career highlights include managing large-scale maintenance operations, spearheading energy-saving initiatives, and delivering cost-effective solutions across various industries. I am skilled in project management, strategic planning, full-stack development, and data analytics to drive operational excellence. Furthermore, I possess expertise in designing workflows for agentic AI to enhance efficiency and create more intelligent automation systems, and I am particularly passionate about the transformative potential of artificial intelligence. Passionate about continuous learning and innovation, I am dedicated to improving efficiency, reducing energy consumption, and achieving sustainable goals.
-                </p>
+    <!-- ==========================================================================
+         HERO SECTION (High-Impact Executive Pitch + Dynamic Bento Metrics)
+         ========================================================================== */ -->
+    <section id="hero" class="hero-section">
+      <div class="hero-glow-bg"></div>
+      <div class="site-container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-status-pill">
+              <span class="brand-dot"></span>
+              <span>Based in Berlin · Open to Software & AI Engineering Roles</span>
             </div>
 
-            <div class="section-content">
-                <h2>🛠️ Technical Skills</h2>
-                
-                <h3>Languages & Frameworks</h3>
-                <div class="skill-tags-container">
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">TypeScript</span>
-                    <span class="skill-tag">React</span>
-                    <span class="skill-tag">C</span>
-                    <span class="skill-tag">C++</span>
-                    <span class="skill-tag">SQL</span>
-                    <span class="skill-tag">HTML</span>
-                    <span class="skill-tag">CSS</span>
-                    <span class="skill-tag">Flutter</span>
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">Nginx</span>
-                    <span class="skill-tag">MySQL</span>
-                    <span class="skill-tag">Dart</span>
-                    <span class="skill-tag">Next.js</span>
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">Express</span>
-                    <span class="skill-tag">BootstrapCSS</span>
-                    <span class="skill-tag">CI/CD</span>
-                    <span class="skill-tag">Zustand</span>
-                    <span class="skill-tag">React Query</span>
-                </div>
+            <h1 class="hero-title">
+              Software Engineer <br />
+              <span class="gradient-text">&amp; AI Builder</span>
+            </h1>
 
-                <h3>Data, BI & Tools</h3>
-                <div class="skill-tags-container">
-                    <span class="skill-tag">Power BI</span>
-                    <span class="skill-tag">Tableau</span>
-                    <span class="skill-tag">Microsoft Project</span>
-                    <span class="skill-tag">Figma</span>
-                    <span class="skill-tag">Git</span>
-                    <span class="skill-tag">GitHub</span>
-                    <span class="skill-tag">Asana</span>
-                    <span class="skill-tag">Trello</span>
-                    <span class="skill-tag">n8n</span>
-                    <span class="skill-tag">LangChain</span>
-                    <span class="skill-tag">Hive</span>
-                    <span class="skill-tag">Looker</span>
-                    <span class="skill-tag">Vercel</span>
-                    <span class="skill-tag">Cursor</span>
-                    <span class="skill-tag">Claude Code</span>
-                </div>
+            <p class="hero-subtitle">
+              Cadet at <strong>42 Berlin</strong> with a <strong>Dual Master's in Energy Management &amp; MBA</strong>, and 
+              <strong>2nd Place Winner</strong> at the Berlin Battery Hackathon. 
+              Bridging 20+ years of mission-critical engineering leadership with production-grade 
+              <strong>Full-Stack</strong>, <strong>Satellite Analytics (OpenEO)</strong>, and <strong>Agentic RAG Systems</strong>.
+            </p>
 
-                <h3>Domain Expertise</h3>
-                <div class="skill-tags-container">
-                    <span class="skill-tag">Energy Management</span>
-                    <span class="skill-tag">Full-Stack Development</span>
-                    <span class="skill-tag">AI Optimization</span>
-                    <span class="skill-tag">UX/UI Design</span>
-                    <span class="skill-tag">Project Management</span>
-                    <span class="skill-tag">Data Analytics</span>
-                    <span class="skill-tag">Business Intelligence</span>
-                    <span class="skill-tag">Agentic Engineering</span>
-                </div>
+            <div class="hero-actions">
+              <a href="#featured" class="btn-primary">
+                <span>Explore Featured Work</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <polyline points="19 12 12 19 5 12"></polyline>
+                </svg>
+              </a>
+
+              <button class="btn-secondary js-copy-email">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>Copy Email</span>
+              </button>
             </div>
-        </section>
 
-        </section>
+            <div class="hero-social-links">
+              <a href="https://github.com/HeartThanakorn" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub Profile">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
 
-        <!-- EXPERIENCE SECTION -->
-        <section id="experience">
-            <h2>📈 Professional Experience</h2>
-            <p class="section-intro">20+ years of experience in engineering, energy, and facility management.</p>
-            
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">Current</div>
-                    <div class="timeline-content">
-                        <h3>Product Coordinator</h3>
-                        <p class="company">DANSAI CONSULTING & SUPPLY</p>
-                        <ul>
-                            <li>Coordinate product development and client solutions</li>
-                            <li>Manage technical consulting projects</li>
-                            <li>Provide energy efficiency recommendations</li>
-                        </ul>
-                    </div>
-                </div>
+              <a href="https://www.linkedin.com/in/thanakorn-thajan/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn Profile">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
 
-                <div class="timeline-item">
-                    <div class="timeline-date">Previous</div>
-                    <div class="timeline-content">
-                        <h3>Assistant Manager (Maintenance and Construction)</h3>
-                        <p class="company">HTHAI (H&M)</p>
-                        <ul>
-                            <li>Led maintenance and construction operations</li>
-                            <li>Managed facility management across multiple locations</li>
-                            <li>Implemented energy-saving initiatives</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">Previous</div>
-                    <div class="timeline-content">
-                        <h3>Equipment and Maintenance Assistant Manager</h3>
-                        <p class="company">McThai (McDonald's)</p>
-                        <ul>
-                            <li>Supervised equipment maintenance programs</li>
-                            <li>Optimized operational efficiency</li>
-                            <li>Coordinated multi-site technical teams</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">Previous</div>
-                    <div class="timeline-content">
-                        <h3>Senior Facility Management Officer</h3>
-                        <p class="company">YUM RESTAURANTS (KFC)</p>
-                        <ul>
-                            <li>Managed facility operations and maintenance</li>
-                            <li>Implemented cost-reduction strategies</li>
-                            <li>Ensured compliance with safety standards</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">Previous</div>
-                    <div class="timeline-content">
-                        <h3>Engineer</h3>
-                        <p class="company">SIAM TOPPAN PACKAGING</p>
-                        <ul>
-                            <li>Electrical engineering and maintenance</li>
-                            <li>Equipment troubleshooting and optimization</li>
-                            <li>Process improvement initiatives</li>
-                        </ul>
-                    </div>
-                </div>
+              <a href="mailto:t.thanakorn@hotmail.com" class="social-icon-btn" title="Send Email">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </a>
             </div>
-        </section>
+          </div>
 
-        <!-- EDUCATION SECTION -->
-        <section id="education">
-            <h2>🎓 Education</h2>
-            
-            <div class="education-grid">
-                <div class="education-card">
-                    <h3>Software Engineering</h3>
-                    <p class="institution">42 Berlin, Germany</p>
-                    <p class="edu-description">Intensive peer-to-peer learning program focusing on C programming, algorithms, system architecture, and full-stack development.</p>
-                </div>
-
-                <div class="education-card">
-                    <h3>MA in Energy Management</h3>
-                    <p class="institution">Berlin School of Business and Innovation, Germany</p>
-                    <p class="edu-description">Advanced studies in sustainable energy systems, renewable technologies, and strategic energy management.</p>
-                </div>
-
-                <div class="education-card">
-                    <h3>Master of Business Administration (MBA)</h3>
-                    <p class="institution">Kasetsart University, Thailand</p>
-                    <p class="edu-description">Specialized in business strategy, operations management, and organizational leadership.</p>
-                </div>
-
-                <div class="education-card">
-                    <h3>Bachelor of Electrical Engineering</h3>
-                    <p class="institution">Naresuan University, Thailand</p>
-                    <p class="edu-description">Foundation in electrical systems, power engineering, and industrial automation.</p>
-                </div>
+          <div class="hero-visual-card">
+            <div class="hero-avatar-wrapper">
+              <div class="hero-avatar-glow"></div>
+              <img
+                src="pictures/profile.jpg"
+                alt="Thanakorn Thajan"
+                class="hero-avatar-img"
+              />
             </div>
-        </section>
 
-        <!-- CERTIFICATIONS SECTION -->
-        <section id="certifications">
-            <h2>🏅 Certifications & Professional Development</h2>
-            
-            <div class="cert-grid">
-                <div class="cert-card">
-                    <div class="cert-icon">📊</div>
-                    <h3>Data Analytics</h3>
-                    <p class="cert-issuer">Google / Coursera</p>
-                    <p>Advanced data analysis, visualization, and statistical methods</p>
-                </div>
+            <!-- Bento Metric Strip -->
+            <div class="bento-metrics-grid">
+              <div class="bento-metric-card">
+                <div class="metric-num emerald">20+ Yrs</div>
+                <div class="metric-label">Engineering, Energy &amp; Facility Operations</div>
+              </div>
 
-                <div class="cert-card">
-                    <div class="cert-icon">📈</div>
-                    <h3>Business Intelligence</h3>
-                    <p class="cert-issuer">Professional Certification</p>
-                    <p>BI tools, dashboard design, and data-driven decision making</p>
-                </div>
+              <div class="bento-metric-card">
+                <div class="metric-num indigo">42 Berlin</div>
+                <div class="metric-label">Software Engineering Cadet (C, Algorithms, Systems)</div>
+              </div>
 
-                <div class="cert-card">
-                    <div class="cert-icon">🎨</div>
-                    <h3>UX Design</h3>
-                    <p class="cert-issuer">Google / Coursera</p>
-                    <p>User research, wireframing, prototyping, and usability testing</p>
-                </div>
+              <div class="bento-metric-card">
+                <div class="metric-num emerald">🥈 2nd Place</div>
+                <div class="metric-label">Berlin Battery Hackathon (RL Energy Trading)</div>
+              </div>
 
-                <div class="cert-card">
-                    <div class="cert-icon">⚡</div>
-                    <h3>Energy Management</h3>
-                    <p class="cert-issuer">Professional Training</p>
-                    <p>Energy efficiency, sustainability, and optimization strategies</p>
-                </div>
-
-                <div class="cert-card">
-                    <div class="cert-icon">📋</div>
-                    <h3>Project Management</h3>
-                    <p class="cert-issuer">Professional Certification</p>
-                    <p>Agile methodologies, resource planning, and team leadership</p>
-                </div>
-
-                <div class="cert-card">
-                    <div class="cert-icon">💻</div>
-                    <h3>Full-Stack Development</h3>
-                    <p class="cert-issuer">Various Platforms</p>
-                    <p>Web development, APIs, databases, and cloud deployment</p>
-                </div>
+              <div class="bento-metric-card">
+                <div class="metric-num indigo">Dual Masters</div>
+                <div class="metric-label">MA Energy Management &amp; MBA Business Strategy</div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- PROJECTS SECTION -->
-        <section id="projects">
-            <h2>💼 Personal & Academic Projects</h2>
-            
-            <div class="project-grid">
-                <div class="project-card">
-                    <span class="project-tag personal">42 Berlin</span>
-                    <h3>Libft - Custom C Library</h3>
-                    <p class="project-subtitle">Core Programming Project</p>
-                    <p>Recreated essential C standard library functions from scratch, implementing memory management, string manipulation, and linked lists to build a solid foundation in low-level programming.</p>
-                    <div class="skill-tags">
-                        <span>C Language</span>
-                        <span>Memory Management</span>
-                        <span>Algorithms</span>
-                        <span>Data Structures</span>
-                    </div>
-                </div>
+    <!-- ==========================================================================
+         FEATURED PROJECTS SHOWCASE (BENTO GRID)
+         ========================================================================== -->
+    <section id="featured" class="section">
+      <div class="site-container">
+        <div class="section-header">
+          <div class="section-tag">Flagship Systems</div>
+          <h2 class="section-title">Featured Engineering Projects</h2>
+          <p class="section-desc">
+            Production-grade platforms built with decoupled microservices, satellite geospatial data, and generative AI.
+          </p>
+        </div>
 
-                <div class="project-card">
-                    <span class="project-tag personal">42 Berlin</span>
-                    <h3>ft_printf - Custom Printf Implementation</h3>
-                    <p class="project-subtitle">Advanced C Programming</p>
-                    <p>Developed a custom implementation of the printf function, handling multiple format specifiers and edge cases while deepening understanding of variadic functions.</p>
-                    <div class="skill-tags">
-                        <span>C Language</span>
-                        <span>Variadic Functions</span>
-                        <span>String Formatting</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <span class="project-tag personal">Personal Project</span>
-                    <h3>Energy Dashboard Prototype</h3>
-                    <p class="project-subtitle">Data Visualization</p>
-                    <p>Created an interactive energy consumption dashboard using Power BI to visualize real-time energy metrics and identify optimization opportunities for commercial facilities.</p>
-                    <div class="skill-tags">
-                        <span>Power BI</span>
-                        <span>Data Analytics</span>
-                        <span>Energy Management</span>
-                        <span>Visualization</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <span class="project-tag personal">Web Development</span>
-                    <h3>Portfolio Website</h3>
-                    <p class="project-subtitle">Responsive Web Design</p>
-                    <p>Designed and developed this professional portfolio website using HTML5, CSS3, and JavaScript, featuring responsive design and smooth navigation.</p>
-                    <div class="skill-tags">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                        <span>Responsive Design</span>
-                    </div>
-                </div>
+        <div class="bento-projects-container">
+          <!-- CARD 1: Solar Scout (Large Feature col-8) -->
+          <div class="project-bento-card col-8">
+            <div class="project-badge-row">
+              <span class="project-type-tag">AI &amp; Microservices Architecture</span>
+              <span class="project-status-badge">Sentinel / OpenEO Satellite Pipeline</span>
             </div>
-        </section>
 
-        <!-- HACKATHON SECTION -->
-        <section id="hackathon">
-            <h2>🏆 Hackathon Achievements</h2>
-            
-            <div class="hackathon-list">
-                <div class="hackathon-card winner">
-                    <div class="hackathon-header">
-                        <span class="project-tag winner">🥈 2nd Place Winner</span>
-                        <span class="hackathon-date">April 2026</span>
-                    </div>
-                    <h3>FlexiFleet: AI-Driven Energy Trading System</h3>
-                    <p class="hackathon-event">Berlin Battery Hackathon</p>
-                    <p class="hackathon-description">
-                        Awarded 2nd Place in the "Algorithmic trading for batteries and hybrid parks" challenge area. Developed FlexiFleet, an advanced algorithmic trading platform powered by Deep Reinforcement Learning (PPO) to navigate complex market dynamics across Day-Ahead and Intraday markets.
-                    </p>
-                    <ul class="hackathon-features">
-                        <li><strong>Deep Reinforcement Learning:</strong> Utilized a PPO agent for intelligent energy dispatch optimization.</li>
-                        <li><strong>Multi-Market Strategy:</strong> Navigates Day-Ahead and Intraday markets to capture full market value.</li>
-                        <li><strong>Battery Health Management:</strong> Drastically reduces cycling to extend battery longevity and lower costs.</li>
-                        <li><strong>Industrial Scalability:</strong> Designed to handle real-world energy complexities and volatile markets.</li>
-                    </ul>
-                    <div class="skill-tags">
-                        <span>Deep Reinforcement Learning (PPO)</span>
-                        <span>Algorithmic Trading</span>
-                        <span>Energy Management</span>
-                        <span>Battery Tech</span>
-                        <span>Python</span>
-                        <span>AI/ML</span>
-                    </div>
-                    <div class="hackathon-impact">
-                        <strong>Impact:</strong> Demonstrated 10% increase in cumulative profit and 67% reduction in battery cycling compared to rule-based approaches.
-                    </div>
-                </div>
+            <h3 class="project-card-title">Solar Scout ☀️</h3>
+            <p class="project-card-subtitle">Satellite-Driven Solar Decision Support Platform</p>
 
-                <div class="hackathon-card winner">
-                    <div class="hackathon-header">
-                        <span class="project-tag winner">🥈 2nd Place Winner</span>
-                        <span class="hackathon-date">September 2025</span>
-                    </div>
-                    <h3>KiezGrid: AI-Driven Local Energy Management</h3>
-                    <p class="hackathon-event">Berlin Energy Hackathon</p>
-                    <p class="hackathon-description">
-                        Developed a comprehensive full-stack platform to revolutionize local green energy management for a 50-apartment building. The solution features:
-                    </p>
-                    <ul class="hackathon-features">
-                        <li><strong>AI Optimization Engine:</strong> Real-time decision-making for solar, battery, and grid usage</li>
-                        <li><strong>Resident Portal:</strong> Intuitive UI for energy consumption tracking and billing</li>
-                        <li><strong>Manager Dashboard:</strong> Comprehensive analytics and system control</li>
-                        <li><strong>Billing System:</strong> Automated, transparent energy cost allocation</li>
-                    </ul>
-                    <div class="skill-tags">
-                        <span>React</span>
-                        <span>Node.js</span>
-                        <span>AI/ML</span>
-                        <span>Energy Management</span>
-                        <span>Full-Stack Dev</span>
-                        <span>UI/UX Design</span>
-                    </div>
-                    <div class="hackathon-impact">
-                        <strong>Impact:</strong> Solution demonstrated 30% potential cost savings and improved grid stability for local communities.
-                    </div>
-                </div>
+            <p class="project-card-desc">
+              A comprehensive decision-support platform built from scratch that leverages satellite earth observation data (OpenEO) to evaluate and identify optimal locations for solar power infrastructure. Features an 8-microservice decoupled architecture (FastAPI &amp; Docker Compose), an Advanced Analytics Dashboard (Next.js), an integrated AI RAG chatbot, and enterprise security with OAuth 2.0 &amp; 2FA.
+            </p>
 
-                <div class="hackathon-card finalist">
-                    <div class="hackathon-header">
-                        <span class="project-tag finalist">🏅 Finalist (Top 12)</span>
-                        <span class="hackathon-date">June 2025</span>
-                    </div>
-                    <h3>AuditronX: Agentic AI Financial Analysis</h3>
-                    <p class="hackathon-event">SCBX/AIAT Hackathon</p>
-                    <p class="hackathon-description">
-                        Designed and pitched an intelligent financial analysis platform leveraging cutting-edge Agentic AI principles:
-                    </p>
-                    <ul class="hackathon-features">
-                        <li><strong>Autonomous Analysis:</strong> AI agents independently analyze financial data and generate insights</li>
-                        <li><strong>n8n Integration:</strong> Seamless workflow automation for real-world deployment</li>
-                        <li><strong>Compliance Framework:</strong> Built-in ethical guidelines and regulatory adherence</li>
-                        <li><strong>Multi-Agent System:</strong> Specialized agents for different financial domains</li>
-                    </ul>
-                    <div class="skill-tags">
-                        <span>Agentic AI</span>
-                        <span>n8n</span>
-                        <span>Financial Modeling</span>
-                        <span>Compliance Tech</span>
-                        <span>API Integration</span>
-                    </div>
-                    <div class="hackathon-impact">
-                        <strong>Achievement:</strong> Selected as top 12 finalist among 100+ teams, recognized for innovation in AI ethics and practical implementation.
-                    </div>
-                </div>
+            <div class="arch-feature-box">
+              <h4>Architecture &amp; Core Stack</h4>
+              <div class="arch-tags-list">
+                <span class="arch-tag-item">Next.js</span>
+                <span class="arch-tag-item">FastAPI</span>
+                <span class="arch-tag-item">Docker Compose (8 Services)</span>
+                <span class="arch-tag-item">OpenEO Satellite API</span>
+                <span class="arch-tag-item">AI / RAG Chatbot</span>
+                <span class="arch-tag-item">2FA &amp; OAuth 2.0</span>
+                <span class="arch-tag-item">PostgreSQL</span>
+              </div>
             </div>
-        </section>
 
-        <!-- VOLUNTEERING SECTION -->
-        <section id="volunteering">
-            <h2>🤝 Volunteering & Community Engagement</h2>
-            
-            <div class="volunteer-grid">
-                <div class="volunteer-card">
-                    <div class="volunteer-icon">👥</div>
-                    <h3>Tech Mentorship Program</h3>
-                    <p class="volunteer-org">42 Berlin Community</p>
-                    <p class="volunteer-period">2024 - Present</p>
-                    <p>Mentoring newcomers in C programming and software engineering fundamentals, conducting peer-learning sessions, and supporting collaborative projects.</p>
-                </div>
-
-                <div class="volunteer-card">
-                    <div class="volunteer-icon">🌱</div>
-                    <h3>Sustainability Advocate</h3>
-                    <p class="volunteer-org">Local Energy Initiatives</p>
-                    <p class="volunteer-period">2023 - Present</p>
-                    <p>Promoting energy efficiency awareness, conducting workshops on sustainable practices, and contributing to community renewable energy projects.</p>
-                </div>
-
-                <div class="volunteer-card">
-                    <div class="volunteer-icon">💡</div>
-                    <h3>Open Source Contributor</h3>
-                    <p class="volunteer-org">GitHub Community</p>
-                    <p class="volunteer-period">2024 - Present</p>
-                    <p>Contributing to open-source projects, sharing knowledge through documentation, and participating in collaborative development efforts.</p>
-                </div>
-
-                <div class="volunteer-card">
-                    <div class="volunteer-icon">🎓</div>
-                    <h3>Career Transition Support</h3>
-                    <p class="volunteer-org">Professional Networks</p>
-                    <p class="volunteer-period">2023 - Present</p>
-                    <p>Sharing experiences and insights with professionals transitioning into tech, providing guidance on skill development and career pathways.</p>
-                </div>
+            <div class="project-links-row">
+              <a href="https://lnkd.in/dZahvHGb" target="_blank" rel="noopener noreferrer" class="project-btn primary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <span>View Demo Video</span>
+              </a>
             </div>
-        </section>
+          </div>
 
-        <footer>
-            <p>&copy; 2026 Thanakorn Thajan. Built with HTML, CSS, and JavaScript.</p>
-        </footer>
+          <!-- CARD 2: Retail Facility Management Platform (col-4) -->
+          <div class="project-bento-card col-4">
+            <div class="project-badge-row">
+              <span class="project-type-tag emerald">Full Stack &amp; DevOps</span>
+            </div>
 
+            <h3 class="project-card-title">Retail Facility Platform</h3>
+            <p class="project-card-subtitle emerald">Production-Grade Maintenance System</p>
+
+            <p class="project-card-desc">
+              Decoupled facility and maintenance management system built for high-uptime operations. Frontend: Next.js 16 (TS, Tailwind, Zustand, React Query 5). Backend: Express.js (TS, Prisma). Database: PostgreSQL 16 &amp; MinIO object storage. Infrastructure: Nginx Proxy Manager, Docker Compose, Jest &amp; Playwright testing.
+            </p>
+
+            <div class="credential-pill">
+              <strong>Test Credentials:</strong><br />
+              Email: <code>admin@facility.one</code><br />
+              Password: <code>Demo@1234</code>
+            </div>
+
+            <div class="project-links-row">
+              <a href="https://retail-facility-management-platform.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-btn emerald">
+                <span>Visit Live Site</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+              <a href="https://github.com/HeartThanakorn/retail-facility-management-platform.git" target="_blank" rel="noopener noreferrer" class="project-btn ghost">
+                <span>GitHub</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- CARD 3: PharmaRAG Assistant (col-6) -->
+          <div class="project-bento-card col-6">
+            <div class="project-badge-row">
+              <span class="project-type-tag">AI / LLM System</span>
+              <span class="project-status-badge">DeepSeek &amp; HNSW</span>
+            </div>
+
+            <h3 class="project-card-title">PharmaRAG Assistant 💊</h3>
+            <p class="project-card-subtitle">Retrieval-Augmented Generation Platform</p>
+
+            <p class="project-card-desc">
+              Specialized RAG-based AI assistant for pharmaceutical drug leaflets. Intelligent PDF document parsing, high-performance vector search (HNSW index), and DeepSeek LLM integration. Delivers grounded answers with automated source citations and medical safety guardrails.
+            </p>
+
+            <div class="arch-feature-box">
+              <div class="arch-tags-list">
+                <span class="arch-tag-item">React</span>
+                <span class="arch-tag-item">Node.js</span>
+                <span class="arch-tag-item">LangChain</span>
+                <span class="arch-tag-item">DeepSeek LLM</span>
+                <span class="arch-tag-item">Gemini Embeddings</span>
+                <span class="arch-tag-item">HNSW Vector</span>
+              </div>
+            </div>
+
+            <div class="project-links-row">
+              <a href="https://github.com/HeartThanakorn/pharma-guard-rag" target="_blank" rel="noopener noreferrer" class="project-btn ghost">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                <span>View on GitHub</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- CARD 4: SparFuchs AI (col-6) -->
+          <div class="project-bento-card col-6">
+            <div class="project-badge-row">
+              <span class="project-type-tag emerald">Mobile &amp; OCR Vision</span>
+              <span class="project-status-badge">Offline-First Mobile</span>
+            </div>
+
+            <h3 class="project-card-title">SparFuchs AI 🦊</h3>
+            <p class="project-card-subtitle emerald">Smart AI Receipt Scanner &amp; Expense Tracker</p>
+
+            <p class="project-card-desc">
+              Offline-first Flutter application powered by Google Gemini 2.5 Flash for automated multilingual receipt parsing and expense categorization. Features interactive charts, local Hive database caching, and a responsive mobile UI built with Riverpod state management.
+            </p>
+
+            <div class="arch-feature-box">
+              <div class="arch-tags-list">
+                <span class="arch-tag-item">Flutter</span>
+                <span class="arch-tag-item">Dart</span>
+                <span class="arch-tag-item">Gemini 2.5 Flash</span>
+                <span class="arch-tag-item">Riverpod</span>
+                <span class="arch-tag-item">Hive NoSQL</span>
+                <span class="arch-tag-item">fl_chart</span>
+              </div>
+            </div>
+
+            <div class="project-links-row">
+              <a href="https://github.com/HeartThanakorn/sparfuchs-mobile-app" target="_blank" rel="noopener noreferrer" class="project-btn ghost">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                <span>View on GitHub</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FILTERABLE PROJECT ARCHIVE (ALL 10 PROJECTS)
+         ========================================================================== -->
+    <section id="projects" class="section">
+      <div class="site-container">
+        <div class="section-header">
+          <div class="section-tag">Complete Portfolio</div>
+          <h2 class="section-title">All Software &amp; AI Projects</h2>
+          <p class="section-desc">
+            Filter through web applications, mobile platforms, automated n8n workflows, and machine learning pipelines.
+          </p>
+        </div>
+
+        <div class="archive-filter-bar">
+          <button class="filter-btn active" data-filter="all">All Projects (10)</button>
+          <button class="filter-btn" data-filter="ai">AI &amp; RAG (5)</button>
+          <button class="filter-btn" data-filter="fullstack">Full-Stack &amp; DevOps (4)</button>
+          <button class="filter-btn" data-filter="mobile">Mobile Apps (2)</button>
+          <button class="filter-btn" data-filter="automation">n8n Automation (3)</button>
+        </div>
+
+        <div class="archive-projects-grid">
+          <!-- 1. Solar Scout -->
+          <div class="archive-card" data-category="ai fullstack">
+            <div class="archive-card-header">
+              <span class="project-type-tag">AI &amp; Full Stack</span>
+            </div>
+            <h3 class="archive-card-title">Solar Scout ☀️</h3>
+            <div class="archive-card-subtitle">Satellite-Driven Solar Decision Platform</div>
+            <p class="archive-card-desc">
+              8-microservice architecture leveraging OpenEO satellite data for solar potential mapping with integrated AI RAG chatbot and OAuth 2.0.
+            </p>
+            <div class="project-links-row">
+              <a href="https://lnkd.in/dZahvHGb" target="_blank" rel="noopener noreferrer" class="project-btn primary">Demo Video →</a>
+            </div>
+          </div>
+
+          <!-- 2. Retail Facility Platform -->
+          <div class="archive-card" data-category="fullstack">
+            <div class="archive-card-header">
+              <span class="project-type-tag emerald">Full Stack &amp; DevOps</span>
+            </div>
+            <h3 class="archive-card-title">Retail Facility Platform</h3>
+            <div class="archive-card-subtitle emerald">Maintenance Management System</div>
+            <p class="archive-card-desc">
+              Next.js 16, Express, PostgreSQL, MinIO, Docker, Playwright. Complete work-order and equipment lifecycle solution.
+            </p>
+            <div class="project-links-row">
+              <a href="https://retail-facility-management-platform.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-btn emerald">Live Site →</a>
+              <a href="https://github.com/HeartThanakorn/retail-facility-management-platform.git" target="_blank" rel="noopener noreferrer" class="project-btn ghost">GitHub</a>
+            </div>
+          </div>
+
+          <!-- 3. PharmaRAG Assistant -->
+          <div class="archive-card" data-category="ai">
+            <div class="archive-card-header">
+              <span class="project-type-tag">AI / RAG</span>
+            </div>
+            <h3 class="archive-card-title">PharmaRAG Assistant 💊</h3>
+            <div class="archive-card-subtitle">Pharmaceutical Leaflet RAG System</div>
+            <p class="archive-card-desc">
+              DeepSeek LLM + LangChain + HNSW Vector Search. Accurate medical document question-answering with automated citations.
+            </p>
+            <div class="project-links-row">
+              <a href="https://github.com/HeartThanakorn/pharma-guard-rag" target="_blank" rel="noopener noreferrer" class="project-btn ghost">GitHub →</a>
+            </div>
+          </div>
+
+          <!-- 4. SparFuchs AI -->
+          <div class="archive-card" data-category="mobile ai">
+            <div class="archive-card-header">
+              <span class="project-type-tag emerald">Mobile Development</span>
+            </div>
+            <h3 class="archive-card-title">SparFuchs AI 🦊</h3>
+            <div class="archive-card-subtitle emerald">Smart AI Receipt Scanning App</div>
+            <p class="archive-card-desc">
+              Offline-first Flutter app powered by Gemini 2.5 Flash for automated OCR receipt parsing, Hive DB, and Riverpod.
+            </p>
+            <div class="project-links-row">
+              <a href="https://github.com/HeartThanakorn/sparfuchs-mobile-app" target="_blank" rel="noopener noreferrer" class="project-btn ghost">GitHub →</a>
+            </div>
+          </div>
+
+          <!-- 5. Flutter Expense Manager -->
+          <div class="archive-card" data-category="mobile">
+            <div class="archive-card-header">
+              <span class="project-type-tag">Mobile App</span>
+            </div>
+            <h3 class="archive-card-title">Flutter Expense Manager 💰</h3>
+            <div class="archive-card-subtitle">Cross-Platform Finance Tracker</div>
+            <p class="archive-card-desc">
+              Cross-platform Flutter application for personal finance management with categories, tags, and local data persistence.
+            </p>
+            <div class="project-links-row">
+              <a href="https://github.com/HeartThanakorn/flutter-expense-manager" target="_blank" rel="noopener noreferrer" class="project-btn ghost">GitHub →</a>
+            </div>
+          </div>
+
+          <!-- 6. n8n PDF Receipt AI Processor -->
+          <div class="archive-card" data-category="automation ai">
+            <div class="archive-card-header">
+              <span class="project-type-tag emerald">AI Automation</span>
+            </div>
+            <h3 class="archive-card-title">n8n PDF Receipt AI Processor</h3>
+            <div class="archive-card-subtitle emerald">Intelligent Workflow Pipeline</div>
+            <p class="archive-card-desc">
+              n8n workflow that monitors Gmail for invoice PDFs, extracts structured data with Gemini AI, and syncs to Google Sheets.
+            </p>
+            <div class="project-links-row">
+              <a href="https://github.com/HeartThanakorn/n8n-pdf-receipt-ai-processor" target="_blank" rel="noopener noreferrer" class="project-btn ghost">GitHub →</a>
+            </div>
+          </div>
+
+          <!-- 7. n8n AI Quote Email Agent -->
+          <div class="archive-card" data-category="automation ai">
+            <div class="archive-card-header">
+              <span class="project-type-tag">AI Automation</span>
+            </div>
+            <h3 class="archive-card-title">n8n AI Quote Email Agent</h3>
+            <div class="archive-card-subtitle">Daily Smart Content Dispatcher</div>
+            <p class="archive-card-desc">
+              Autonomous agent integrating Gemini AI and ZenQuotes API to compose and deliver formatted daily motivational emails.
+            </p>
+            <div class="project-links-row">
+              <a href="https://github.com/HeartThanakorn/n8n-ai-quote-email-agent" target="_blank" rel="noopener noreferrer" class="project-btn ghost">GitHub →</a>
+            </div>
+          </div>
+
+          <!-- 8. n8n AI Chatbot React -->
+          <div class="archive-card" data-category="fullstack automation">
+            <div class="archive-card-header">
+              <span class="project-type-tag emerald">Full Stack</span>
+            </div>
+            <h3 class="archive-card-title">n8n AI Chatbot React</h3>
+            <div class="archive-card-subtitle emerald">Webhook-Integrated UI</div>
+            <p class="archive-card-desc">
+              Responsive React &amp; TypeScript chat client communicating with backend n8n automation workflows with session history.
+            </p>
+            <div class="project-links-row">
+              <a href="https://github.com/HeartThanakorn/n8n-ai-chatbot-react" target="_blank" rel="noopener noreferrer" class="project-btn ghost">GitHub →</a>
+            </div>
+          </div>
+
+          <!-- 9. Thai Street Food Delivery -->
+          <div class="archive-card" data-category="fullstack">
+            <div class="archive-card-header">
+              <span class="project-type-tag">Full Stack</span>
+            </div>
+            <h3 class="archive-card-title">Thai Street Food Delivery</h3>
+            <div class="archive-card-subtitle">E-Commerce Web Application</div>
+            <p class="archive-card-desc">
+              Full e-commerce platform built with React, TypeScript, Node.js, Express, MySQL, and JWT secure user authentication.
+            </p>
+            <div class="project-links-row">
+              <a href="https://github.com/HeartThanakorn/thai-street-food-delivery" target="_blank" rel="noopener noreferrer" class="project-btn ghost">GitHub →</a>
+            </div>
+          </div>
+
+          <!-- 10. FlexiFleet -->
+          <div class="archive-card" data-category="ai">
+            <div class="archive-card-header">
+              <span class="project-type-tag amber">🥈 Hackathon Winner</span>
+            </div>
+            <h3 class="archive-card-title">FlexiFleet Trading System</h3>
+            <div class="archive-card-subtitle">Reinforcement Learning Trading</div>
+            <p class="archive-card-desc">
+              Deep Reinforcement Learning (PPO) agent for battery energy storage arbitrage across Day-Ahead &amp; Intraday European power markets.
+            </p>
+            <div class="project-links-row">
+              <a href="https://www.linkedin.com/feed/update/urn:li:activity:7455931760468668416/" target="_blank" rel="noopener noreferrer" class="project-btn ghost">LinkedIn Post →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         HACKATHON ACHIEVEMENTS (TROPHY CABINET)
+         ========================================================================== -->
+    <section id="hackathons" class="section">
+      <div class="site-container">
+        <div class="section-header">
+          <div class="section-tag emerald">Competitive Engineering</div>
+          <h2 class="section-title">Hackathon Trophies &amp; Challenges</h2>
+          <p class="section-desc">
+            Proven track record of designing, pitching, and delivering algorithmic solutions under tight competitive deadlines.
+          </p>
+        </div>
+
+        <!-- Spotlight Trophy: FlexiFleet -->
+        <div class="hackathon-spotlight-card">
+          <div class="spotlight-trophy-badge">
+            🥈 2nd Place Winner · Berlin Battery Hackathon (April 2026)
+          </div>
+          <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 8px;">
+            FlexiFleet: AI-Driven Energy Trading System
+          </h3>
+          <p style="color: var(--accent-emerald-light); font-weight: 600; margin-bottom: 16px;">
+            Challenge Area: Algorithmic trading for utility-scale batteries and hybrid parks
+          </p>
+          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">
+            Developed an advanced algorithmic trading platform powered by <strong>Deep Reinforcement Learning (PPO)</strong> to navigate market dynamics across Day-Ahead and Intraday markets. 
+            <strong>Key Business Innovation:</strong> Achieved a <strong>+10% increase in cumulative profit</strong> while reducing battery degradation cycling by <strong>67%</strong> compared to traditional rule-based baselines.
+          </p>
+          <div class="arch-tags-list" style="margin-bottom: 24px;">
+            <span class="arch-tag-item">Deep Reinforcement Learning (PPO)</span>
+            <span class="arch-tag-item">Algorithmic Trading</span>
+            <span class="arch-tag-item">Energy Management</span>
+            <span class="arch-tag-item">Battery Tech</span>
+            <span class="arch-tag-item">Python</span>
+          </div>
+          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7455931760468668416/" target="_blank" rel="noopener noreferrer" class="project-btn emerald">
+            <span>View Award Details on LinkedIn</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Additional Hackathons Grid -->
+        <div class="hackathon-grid">
+          <!-- 1. ApexSafe -->
+          <div class="hackathon-mini-card">
+            <span class="project-type-tag" style="margin-bottom: 12px; align-self: flex-start;">🚀 Participant · Nov 2025</span>
+            <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 6px;">ApexSafe: Satellite Trail Safety</h4>
+            <p style="font-size: 0.85rem; color: var(--accent-indigo-light); margin-bottom: 12px;">10th CASSINI Hackathon: EU Space for Consumer Experience</p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 16px; flex-grow: 1;">
+              AI platform utilizing real-time data from EU Copernicus Sentinel Satellites (S-1, S-2, S-3, S-5P) &amp; Galileo GNSS for predictive trail hazards (landslides/wildfires) with 100% offline capability.
+            </p>
+            <div class="project-links-row">
+              <a href="https://apex-safe.web.app/" target="_blank" rel="noopener noreferrer" class="project-btn primary" style="font-size: 0.82rem; padding: 6px 14px;">Live App →</a>
+              <a href="https://www.linkedin.com/feed/update/urn:li:activity:7394309454520905728/" target="_blank" rel="noopener noreferrer" class="project-btn ghost" style="font-size: 0.82rem; padding: 6px 14px;">LinkedIn</a>
+            </div>
+          </div>
+
+          <!-- 2. KiezGrid -->
+          <div class="hackathon-mini-card">
+            <span class="project-type-tag emerald" style="margin-bottom: 12px; align-self: flex-start;">🥈 2nd Place · Sep 2025</span>
+            <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 6px;">KiezGrid: Local Energy Sharing</h4>
+            <p style="font-size: 0.85rem; color: var(--accent-emerald-light); margin-bottom: 12px;">Berlin Energy Hackathon (Sponsored by Voltaic)</p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 16px; flex-grow: 1;">
+              Full-stack platform to transparently optimize, share, and bill solar/battery energy in a 50-apartment building with live resident analytics and automated manager billing.
+            </p>
+            <div class="project-links-row">
+              <a href="https://www.linkedin.com/feed/update/urn:li:activity:7373428387190714368/" target="_blank" rel="noopener noreferrer" class="project-btn ghost" style="font-size: 0.82rem; padding: 6px 14px;">LinkedIn →</a>
+            </div>
+          </div>
+
+          <!-- 3. AuditronX -->
+          <div class="hackathon-mini-card">
+            <span class="project-type-tag amber" style="margin-bottom: 12px; align-self: flex-start;">🏅 Finalist (Top 12) · Jun 2025</span>
+            <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 6px;">AuditronX: Agentic Financial AI</h4>
+            <p style="font-size: 0.85rem; color: #fbbf24; margin-bottom: 12px;">SCBX / AIAT International Hackathon (Top 12 of ~120 Teams)</p>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 16px; flex-grow: 1;">
+              Multi-agent financial analytics platform leveraging Agentic AI principles orchestrated with n8n workflows for automated regulatory compliance and risk assessments.
+            </p>
+            <div class="project-links-row">
+              <a href="https://www.linkedin.com/feed/update/urn:li:activity:7344754548231589889/" target="_blank" rel="noopener noreferrer" class="project-btn ghost" style="font-size: 0.82rem; padding: 6px 14px;">LinkedIn →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SKILLS MATRIX (BENTO TECH GRID)
+         ========================================================================== -->
+    <section id="skills" class="section">
+      <div class="site-container">
+        <div class="section-header">
+          <div class="section-tag">Core Competencies</div>
+          <h2 class="section-title">Technical Skills &amp; Domain Expertise</h2>
+          <p class="section-desc">
+            A versatile toolkit spanning systems programming, cloud architecture, machine learning, and industrial domain leadership.
+          </p>
+        </div>
+
+        <div class="skills-bento-grid">
+          <!-- 1. Languages & Core -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3 class="skill-cat-title">Languages &amp; Core</h3>
+            </div>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">TypeScript</span>
+              <span class="skill-pill">JavaScript</span>
+              <span class="skill-pill">C</span>
+              <span class="skill-pill">C++</span>
+              <span class="skill-pill">SQL</span>
+              <span class="skill-pill">Dart</span>
+              <span class="skill-pill">HTML5 / CSS3</span>
+            </div>
+          </div>
+
+          <!-- 2. Full-Stack & Cloud -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon emerald">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                </svg>
+              </div>
+              <h3 class="skill-cat-title">Full-Stack &amp; DevOps</h3>
+            </div>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill">Next.js 16</span>
+              <span class="skill-pill">React</span>
+              <span class="skill-pill">Node.js</span>
+              <span class="skill-pill">FastAPI</span>
+              <span class="skill-pill">Express.js</span>
+              <span class="skill-pill">Docker &amp; Compose</span>
+              <span class="skill-pill">Nginx Reverse Proxy</span>
+              <span class="skill-pill">PostgreSQL</span>
+              <span class="skill-pill">MinIO</span>
+              <span class="skill-pill">Tailwind CSS</span>
+              <span class="skill-pill">Flutter</span>
+              <span class="skill-pill">CI/CD</span>
+            </div>
+          </div>
+
+          <!-- 3. AI, Data & Automation -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path>
+                  <path d="M12 12L2.1 7.1"></path>
+                  <path d="M12 12l9.9-4.9"></path>
+                </svg>
+              </div>
+              <h3 class="skill-cat-title">AI, Data &amp; Automation</h3>
+            </div>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill">DeepSeek LLM</span>
+              <span class="skill-pill">RAG Architectures</span>
+              <span class="skill-pill">LangChain</span>
+              <span class="skill-pill">PPO Reinforcement Learning</span>
+              <span class="skill-pill">OpenEO Satellite Data</span>
+              <span class="skill-pill">Google Gemini AI</span>
+              <span class="skill-pill">n8n Automation</span>
+              <span class="skill-pill">Power BI</span>
+              <span class="skill-pill">Tableau</span>
+            </div>
+          </div>
+
+          <!-- 4. Domain & Leadership -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon emerald">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+              </div>
+              <h3 class="skill-cat-title">Domain Leadership</h3>
+            </div>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill">Energy Management</span>
+              <span class="skill-pill">Facility Operations</span>
+              <span class="skill-pill">Preventive Maintenance</span>
+              <span class="skill-pill">Multi-Site Leadership</span>
+              <span class="skill-pill">Agile Project Mgmt</span>
+              <span class="skill-pill">Cross-Border Operations</span>
+              <span class="skill-pill">Cost Optimization</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CAREER JOURNEY (20-YEAR DUAL-LAYER TIMELINE)
+         ========================================================================== -->
+    <section id="experience" class="section">
+      <div class="site-container">
+        <div class="section-header">
+          <div class="section-tag">Career Evolution</div>
+          <h2 class="section-title">Professional Experience</h2>
+          <p class="section-desc">
+            Two decades of engineering problem solving, from mission-critical facilities to scalable software and DevOps.
+          </p>
+        </div>
+
+        <div class="timeline-wrapper">
+          <!-- Item 1: Freelance Full-Stack & DevOps -->
+          <div class="timeline-node">
+            <div class="timeline-card">
+              <span class="timeline-date-chip">Nov 2025 - Present</span>
+              <h3 class="timeline-role">Freelance Full-Stack Developer &amp; DevOps</h3>
+              <p class="timeline-company">Self-Employed · Project-based</p>
+              <ul class="timeline-bullets">
+                <li>Developed and deployed a commercial web application for a wellness SME serving live production customers.</li>
+                <li><strong>Containerization &amp; Deployment:</strong> Dockerized the application stack using Docker and Docker Compose to ensure identical environments across development and production.</li>
+                <li><strong>Infrastructure Management:</strong> Managed a Linux-based VPS, configured Nginx as a reverse proxy, and configured SSL certificates with automated Let's Encrypt renewal.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Item 2: 42 Berlin Cadet -->
+          <div class="timeline-node emerald">
+            <div class="timeline-card">
+              <span class="timeline-date-chip emerald">May 2025 - April 2026</span>
+              <h3 class="timeline-role">Software Engineering Cadet</h3>
+              <p class="timeline-company">42 Berlin · Berlin, Germany</p>
+              <ul class="timeline-bullets">
+                <li>Rigorous, peer-to-peer software engineering curriculum solving low-level systems problems from scratch without external libraries.</li>
+                <li>Core focus on C programming, memory allocation, algorithms, Unix systems, networking, and full-stack software architecture.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Item 3: Dansai Consulting -->
+          <div class="timeline-node">
+            <div class="timeline-card">
+              <span class="timeline-date-chip">Jan 2023 - Present</span>
+              <h3 class="timeline-role">Engineer and Data Manager</h3>
+              <p class="timeline-company">Dansai Consulting &amp; Supply Co., Ltd. · Part-time</p>
+              <ul class="timeline-bullets">
+                <li>Acted as primary technical liaison between users and the engineering team to enhance the Vservesafe digital food safety platform.</li>
+                <li>Designed and built interactive data analytics dashboards to display real-time operational metrics for enterprise clients.</li>
+                <li>Led digital power meter installations for hotel clients, enabling real-time energy monitoring to plan and reduce utility expenditures.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Item 4: Hthai Co., Ltd. (H&M, COS, ALO) -->
+          <div class="timeline-node">
+            <div class="timeline-card">
+              <span class="timeline-date-chip">Oct 2015 - Sep 2024 (9 Years)</span>
+              <h3 class="timeline-role">Assistant Manager (Maintenance &amp; Construction)</h3>
+              <p class="timeline-company">Hthai Co., Ltd. (H&amp;M, COS, ALO, H&amp;M HOME, D'ark) · Full-time</p>
+              <ul class="timeline-bullets">
+                <li>Led comprehensive maintenance operations and new construction projects for global retail brands across Thailand and Cambodia.</li>
+                <li>Developed annual budgets and preventive maintenance schedules across dozens of flagship retail stores, saving operational expenses and minimizing downtime.</li>
+                <li>Negotiated contracts and supervised multi-disciplinary engineering subcontractors.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ACCORDION: Show Earlier History (2004 - 2015) -->
+          <button id="toggleCareerAccordion" class="accordion-toggle-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+            <span>+ View Prior Engineering &amp; Operations Leadership (2004 - 2015)</span>
+          </button>
+
+          <div id="priorCareerContent" class="accordion-content">
+            <!-- McDonald's Thailand -->
+            <div class="timeline-node" style="margin-top: 32px;">
+              <div class="timeline-card">
+                <span class="timeline-date-chip">Feb 2010 - Sep 2015</span>
+                <h3 class="timeline-role">Equipment and Maintenance Assistant Manager</h3>
+                <p class="timeline-company">McDonald's Thailand (McThai Co., Ltd.) · Full-time</p>
+                <ul class="timeline-bullets">
+                  <li>Managed technical support, equipment installations, and preventive maintenance across national restaurant networks.</li>
+                  <li>Championed nationwide restaurant energy management and cost-saving initiatives.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- KFC Yum! -->
+            <div class="timeline-node">
+              <div class="timeline-card">
+                <span class="timeline-date-chip">Apr 2007 - Jan 2010</span>
+                <h3 class="timeline-role">Senior Facility Management Officer</h3>
+                <p class="timeline-company">Yum! Restaurants International (KFC) · Full-time</p>
+                <ul class="timeline-bullets">
+                  <li>Coordinated supplier network, equipment acceptance testing, and nationwide preventive maintenance programs.</li>
+                  <li>Spearheaded store-level energy reduction projects to optimize operational expenditures.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Siam Toppan Packaging -->
+            <div class="timeline-node">
+              <div class="timeline-card">
+                <span class="timeline-date-chip">Apr 2004 - Mar 2007</span>
+                <h3 class="timeline-role">Plant Engineer</h3>
+                <p class="timeline-company">Siam Toppan Packaging Co., Ltd. · Full-time</p>
+                <ul class="timeline-bullets">
+                  <li>Planned preventive maintenance for heavy factory machinery and industrial facility infrastructure.</li>
+                  <li>Received official recognition from the parent company in Japan for an electricity cost reduction engineering initiative.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         EDUCATION & CERTIFICATIONS HUB
+         ========================================================================== -->
+    <section id="education" class="section">
+      <div class="site-container">
+        <div class="section-header">
+          <div class="section-tag emerald">Lifelong Learning</div>
+          <h2 class="section-title">Education &amp; Professional Certifications</h2>
+          <p class="section-desc">
+            A solid academic foundation in electrical engineering, management, and continuous modern certifications.
+          </p>
+        </div>
+
+        <div class="edu-cert-grid">
+          <!-- Left: Academic Degrees -->
+          <div class="edu-col">
+            <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 20px;">🎓 Academic Education</h3>
+
+            <div class="edu-card-item">
+              <span class="timeline-date-chip emerald">May 2025 - April 2026</span>
+              <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 4px;">Software Engineering</h4>
+              <p style="color: var(--accent-indigo-light); font-weight: 600; font-size: 0.9rem; margin-bottom: 8px;">42 Berlin · Berlin, Germany</p>
+              <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+                Intensive peer-to-peer engineering program focusing on low-level C programming, memory architectures, algorithms, and full-stack systems.
+              </p>
+            </div>
+
+            <div class="edu-card-item">
+              <span class="timeline-date-chip">Oct 2024 - April 2026</span>
+              <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 4px;">MA in Energy Management</h4>
+              <p style="color: var(--accent-indigo-light); font-weight: 600; font-size: 0.9rem; margin-bottom: 8px;">Berlin School of Business and Innovation · Germany</p>
+              <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+                Sustainable energy systems, renewable technologies, regulatory frameworks, and strategic energy efficiency.
+              </p>
+            </div>
+
+            <div class="edu-card-item">
+              <span class="timeline-date-chip">May 2013 - March 2015</span>
+              <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 4px;">Master of Business Administration (MBA)</h4>
+              <p style="color: var(--accent-indigo-light); font-weight: 600; font-size: 0.9rem; margin-bottom: 8px;">Kasetsart University · Bangkok, Thailand</p>
+              <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+                Business strategy, financial operations, supply chain economics, and corporate leadership.
+              </p>
+            </div>
+
+            <div class="edu-card-item">
+              <span class="timeline-date-chip">May 2000 - March 2003</span>
+              <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 4px;">Bachelor of Electrical Engineering</h4>
+              <p style="color: var(--accent-indigo-light); font-weight: 600; font-size: 0.9rem; margin-bottom: 8px;">Naresuan University · Thailand</p>
+              <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+                Power systems, electrical circuits, electronics, control systems, and industrial automation fundamentals.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: Professional Certifications -->
+          <div class="cert-col">
+            <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 20px;">🏅 Verified Credentials</h3>
+
+            <div class="cert-cards-container">
+              <div class="cert-tile">
+                <div>
+                  <h4>IBM AI Developer</h4>
+                  <div class="cert-issuer-text">IBM / Coursera</div>
+                </div>
+                <a href="https://coursera.org/share/08c22c6c6798b0bd109ffec6d0924ce5" target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+                  Verify Certificate ↗
+                </a>
+              </div>
+
+              <div class="cert-tile">
+                <div>
+                  <h4>Full-Stack Development Bootcamp</h4>
+                  <div class="cert-issuer-text">Professional Training</div>
+                </div>
+                <a href="https://drive.google.com/file/d/1L2LI0n-IZb7obD8I8sLniRjlzpRQXGQa/view" target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+                  Verify Certificate ↗
+                </a>
+              </div>
+
+              <div class="cert-tile">
+                <div>
+                  <h4>Google Data Analytics</h4>
+                  <div class="cert-issuer-text">Google / Coursera</div>
+                </div>
+                <a href="https://coursera.org/share/a0db41d2dc17b03d44ae53bae2b38653" target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+                  Verify Certificate ↗
+                </a>
+              </div>
+
+              <div class="cert-tile">
+                <div>
+                  <h4>Google Project Management</h4>
+                  <div class="cert-issuer-text">Google / Coursera</div>
+                </div>
+                <a href="https://coursera.org/share/2e4d95f50034f1d471111604453fbeb1" target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+                  Verify Certificate ↗
+                </a>
+              </div>
+
+              <div class="cert-tile">
+                <div>
+                  <h4>Google Business Intelligence</h4>
+                  <div class="cert-issuer-text">Google / Coursera</div>
+                </div>
+                <a href="https://coursera.org/share/e10d5bd19ddf88599fd661e2ff9f729c" target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+                  Verify Certificate ↗
+                </a>
+              </div>
+
+              <div class="cert-tile">
+                <div>
+                  <h4>Google UX Design</h4>
+                  <div class="cert-issuer-text">Google / Coursera</div>
+                </div>
+                <a href="https://coursera.org/share/a0db41d2dc17b03d44ae53bae2b38653" target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+                  Verify Certificate ↗
+                </a>
+              </div>
+
+              <div class="cert-tile">
+                <div>
+                  <h4>Flutter and Dart Mobile Apps</h4>
+                  <div class="cert-issuer-text">Coursera</div>
+                </div>
+                <a href="https://www.coursera.org/account/accomplishments/records/218YH2YHFM84" target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+                  Verify Certificate ↗
+                </a>
+              </div>
+
+              <div class="cert-tile">
+                <div>
+                  <h4>Conversational AI &amp; Chatbots</h4>
+                  <div class="cert-issuer-text">Berlin School of Business &amp; Innovation</div>
+                </div>
+                <a href="https://certificate.berlinsbi.com/verify/a8bbc9af667" target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+                  Verify Certificate ↗
+                </a>
+              </div>
+
+              <div class="cert-tile">
+                <div>
+                  <h4>Google Cloud: Big Data &amp; ML</h4>
+                  <div class="cert-issuer-text">Google Cloud</div>
+                </div>
+                <a href="https://drive.google.com/file/d/16MlNeLr36erAu0-PDpzTgwD4V1MB1U1u/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+                  Verify Certificate ↗
+                </a>
+              </div>
+
+              <div class="cert-tile">
+                <div>
+                  <h4>Mastering DeepSeek.ai</h4>
+                  <div class="cert-issuer-text">DeepSeek AI</div>
+                </div>
+                <span class="cert-issuer-text" style="color: var(--accent-emerald-light);">Advanced Competency</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Community & Volunteering Box -->
+        <div style="margin-top: 48px; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 28px;">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+            <span class="project-type-tag emerald">Community Leadership</span>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Feb 2025 - Present</span>
+          </div>
+          <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 6px;">
+            Website Administrator &amp; System Manager · Thai Studentenverein in Deutschland e.V.
+          </h4>
+          <p style="color: var(--text-secondary); font-size: 0.94rem; line-height: 1.65;">
+            Responsible for the administration, maintenance, and ongoing development of the association's official platform in Germany. Managing member database systems, digital workflow tools, and ensuring security, responsiveness, and server uptime.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT & FOOTER
+         ========================================================================== -->
+    <footer id="contact" class="site-footer">
+      <div class="site-container">
+        <div style="text-align: center; max-width: 650px; margin: 0 auto 52px;">
+          <div class="section-tag emerald">Connect</div>
+          <h2 style="font-size: 2.2rem; font-weight: 800; margin-bottom: 16px;">
+            Let's Build Something Impactful
+          </h2>
+          <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7; margin-bottom: 28px;">
+            Currently in Berlin, actively interested in Software Engineering, AI Applications, and Energy Tech opportunities. Feel free to reach out via email or LinkedIn.
+          </p>
+          <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+            <a href="mailto:t.thanakorn@hotmail.com" class="btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>t.thanakorn@hotmail.com</span>
+            </a>
+            <a href="https://www.linkedin.com/in/thanakorn-thajan/" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/HeartThanakorn" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-inner">
+          <div class="footer-copy">
+            &copy; 2026 Thanakorn Thajan · Built with Modern Standards &amp; Deployed on GitHub Pages.
+          </div>
+          <div style="display: flex; gap: 20px;">
+            <a href="#hero" style="color: var(--text-muted); font-size: 0.88rem;">Back to Top ↑</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating Copy Toast Notification -->
+    <div id="emailToast" class="toast-notice">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+      </svg>
+      <span class="toast-msg">Email copied to clipboard!</span>
     </div>
 
-    <!-- JavaScript for Navbar -->
-    <script>
-        // Mobile menu toggle
-        const navToggle = document.getElementById('navToggle');
-        const navMenu = document.getElementById('navMenu');
-
-        navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
-        });
-
-        // Smooth scrolling
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const targetId = link.getAttribute('href');
-                const targetSection = document.querySelector(targetId);
-                
-                // Close mobile menu
-                navMenu.classList.remove('active');
-                navToggle.classList.remove('active');
-                
-                // Scroll to section
-                const navHeight = document.querySelector('.navbar').offsetHeight;
-                const targetPosition = targetSection.offsetTop - navHeight;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Active link on scroll
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-link');
-            
-            let current = '';
-            const navHeight = document.querySelector('.navbar').offsetHeight;
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - navHeight - 100;
-                const sectionHeight = section.clientHeight;
-                
-                if (window.pageYOffset >= sectionTop) {
-                    current = section.getAttribute('id');
-                }
-            });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
-</body>
+    <!-- Scripts -->
+    <script src="js/modern.js"></script>
+  </body>
 </html>
