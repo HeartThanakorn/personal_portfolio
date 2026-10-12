@@ -480,80 +480,201 @@ img {
   transform: translateY(-2px);
 }
 
-/* Hero Right Profile & Metric Cards */
-.hero-visual-card {
+/* ==========================================================================
+   UNIFIED BENTO SHOWCASE CARD (Hero Right)
+   ========================================================================== */
+
+.hero-showcase-panel {
   position: relative;
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-normal);
+  overflow: hidden;
 }
 
-.hero-avatar-wrapper {
-  position: relative;
-  width: 220px;
-  height: 220px;
-  margin: 0 auto 28px;
+[data-theme="light"] .hero-showcase-panel {
+  background: #ffffff;
+  border-color: rgba(226, 232, 240, 0.95);
+  box-shadow: 0 16px 36px -8px rgba(15, 23, 42, 0.08), 0 0 0 1px rgba(226, 232, 240, 0.8);
 }
 
-.hero-avatar-glow {
+.hero-showcase-panel::before {
+  content: '';
   position: absolute;
-  inset: -8px;
-  border-radius: 50%;
-  background: var(--gradient-accent);
-  filter: blur(14px);
-  opacity: 0.6;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-tech);
 }
 
-.hero-avatar-img {
+.hero-showcase-panel:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-2px);
+}
+
+/* Profile Header Inside Card */
+.showcase-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.showcase-avatar-wrapper {
   position: relative;
+  width: 76px;
+  height: 76px;
+  flex-shrink: 0;
+}
+
+.showcase-avatar-img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid var(--bg-surface);
-  box-shadow: var(--shadow-lg);
+  border: 3px solid var(--bg-surface);
+  box-shadow: var(--shadow-md);
 }
 
-/* Bento Metrics Grid */
-.bento-metrics-grid {
+[data-theme="light"] .showcase-avatar-img {
+  border-color: #ffffff;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.12);
+}
+
+.showcase-status-dot {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 15px;
+  height: 15px;
+  background: var(--accent-emerald);
+  border: 2.5px solid var(--bg-surface);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--accent-emerald);
+  animation: pulse-dot 2s infinite;
+}
+
+[data-theme="light"] .showcase-status-dot {
+  border-color: #ffffff;
+}
+
+@keyframes pulse-dot {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.15); opacity: 0.85; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.showcase-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.showcase-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.showcase-name {
+  font-size: 1.22rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.showcase-verified-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  background: var(--gradient-tech);
+  color: #ffffff;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.showcase-role-text {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.showcase-badge-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.showcase-pill {
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+}
+
+.showcase-pill.emerald {
+  background: var(--accent-emerald-glow);
+  border-color: rgba(16, 185, 129, 0.3);
+  color: var(--accent-emerald-light);
+}
+
+[data-theme="light"] .showcase-pill.emerald {
+  color: #059669;
+}
+
+/* Metric Boxes Grid Inside Card */
+.showcase-metrics-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
+  gap: 12px;
 }
 
-.bento-metric-card {
-  background: var(--bg-card);
-  backdrop-filter: blur(12px);
+.showcase-metric-box {
+  background: var(--bg-surface-elevated);
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
-  padding: 18px 20px;
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
   transition: all var(--transition-fast);
   position: relative;
   overflow: hidden;
 }
 
-.bento-metric-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--gradient-tech);
-  opacity: 0;
-  transition: opacity var(--transition-fast);
+[data-theme="light"] .showcase-metric-box {
+  background: #f8fafc;
+  border-color: #e2e8f0;
 }
 
-.bento-metric-card:hover {
-  transform: translateY(-3px);
+.showcase-metric-box:hover {
+  transform: translateY(-2px);
   border-color: var(--border-hover);
   background: var(--bg-card-hover);
-  box-shadow: var(--shadow-glow);
 }
 
-.bento-metric-card:hover::before {
-  opacity: 1;
+[data-theme="light"] .showcase-metric-box:hover {
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
 }
 
 .metric-num {
-  font-size: 1.85rem;
+  font-size: 1.65rem;
   font-weight: 800;
   color: var(--text-primary);
   letter-spacing: -0.02em;
@@ -565,14 +686,22 @@ img {
   color: var(--accent-emerald-light);
 }
 
+[data-theme="light"] .metric-num.emerald {
+  color: #059669;
+}
+
 .metric-num.indigo {
   color: var(--accent-indigo-light);
 }
 
+[data-theme="light"] .metric-num.indigo {
+  color: #4f46e5;
+}
+
 .metric-label {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--text-secondary);
-  line-height: 1.4;
+  line-height: 1.35;
   font-weight: 500;
 }
 
@@ -1485,13 +1614,18 @@ img {
     font-size: 0.98rem;
   }
 
-  .hero-avatar-wrapper {
-    width: 150px;
-    height: 150px;
+  .hero-showcase-panel {
+    padding: 18px 16px;
   }
 
-  .bento-metrics-grid {
+  .showcase-avatar-wrapper {
+    width: 64px;
+    height: 64px;
+  }
+
+  .showcase-metrics-grid {
     grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .hero-actions {
